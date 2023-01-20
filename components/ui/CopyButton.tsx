@@ -7,6 +7,7 @@ import CopyActiveIcon from "public/assets/icons/copy_active.svg";
 
 export const CopyButton = ({ content, children, compact, classes }: {content: string, children?: any, compact?: boolean, classes?: string }) => {
     const [copied, setCopied] = useState(false);
+    classes = classes || '';
 
     function copy() {
         const el = document.createElement('textarea');
@@ -21,8 +22,9 @@ export const CopyButton = ({ content, children, compact, classes }: {content: st
     }
 
     if (compact) {
+        classes += ' cursor-pointer';
         return (
-            <button className={`${classes} cursor-pointer`} onClick={copy}>
+            <button className={classes} onClick={copy}>
                 {!copied && <CopyIcon className="w-8" />}
                 {copied && <CopyActiveIcon className="w-8" />}
             </button >
