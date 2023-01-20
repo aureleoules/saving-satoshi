@@ -7,7 +7,6 @@ import clsx from 'clsx'
 import { SignUpModal } from 'components/chapters/SignUpModal'
 import PlayIcon from 'public/assets/icons/play.svg'
 import { FindChallengeBottomBar } from 'components/chapters/FindChallengeBottomBar'
-import { CopyButton } from 'components/ui/CopyButton'
 import { CopyableCode } from 'components/ui/CopyableCode'
 
 //Am i going to to this boilerplate for every view?
